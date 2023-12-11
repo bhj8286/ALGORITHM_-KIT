@@ -13,8 +13,6 @@ def solution(priorities, location):
 
     while my_priorities:
         max_priority = max(my_priorities)
-        if len(priorities) == 0:
-            break
 
         while check[AL_list[0]] != max_priority:
             AL_list.append(AL_list.popleft())
