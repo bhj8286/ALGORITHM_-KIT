@@ -1,15 +1,3 @@
-# 같은 자리에 있는 수들을 비교해서 큰 것부터 배치하면 된다
-# def solution(numbers):
-#     answer = ''
-#     string_numbers = list(map(str, numbers))
-#     my = dict(zip(string_numbers, numbers))
-#     for i in string_numbers:
-        
-#     return answer
-
-# print(solution([6, 10, 2]))
-# print(solution([3, 30, 34, 5, 9]))
-
 # 틀릴 테스트케이스가 많다는 걸 알면서 했다
 def solution(arr):
     answer = ''
@@ -42,3 +30,22 @@ def solution(arr):
 print(solution([1000, 100])) # 반례 -> 통과 못함
 print(solution([6, 10, 2]))
 print(solution([3, 30, 34, 5, 9]))
+
+
+# permutation 활용
+from itertools import permutations
+
+def solution(arr):
+    string_numbers = list(map(str, arr))
+    total = []
+
+    for perm in permutations(string_numbers, len(arr)):
+        total.append(int(''.join(perm)))
+
+    answer = str(max(total))
+    return answer
+
+print(solution([6, 10, 2]))
+print(solution([3, 30, 34, 5, 9]))
+
+
