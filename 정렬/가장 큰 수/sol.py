@@ -39,6 +39,6 @@ def solution(arr):
     return answer
 
 
-print(solution([1000, 100])) # 반례
+print(solution([1000, 100])) # 반례 -> 통과 못함
 print(solution([6, 10, 2]))
 print(solution([3, 30, 34, 5, 9]))
