@@ -1,7 +1,7 @@
 # 참조 정답 코드
 def solution(numbers):
     numbers = list(map(str, numbers))
-    numbers.sort(key=lambda x: x * 3, reverse=True)
+    numbers.sort(key=lambda x: x * 3, reverse=True) # *3을 하는 이유: x*3을 하게 되면 [3, 310, 30] -> [333, 310310310, 303030] 이렇게 된다. 자릿수를 맞춰 비교하기 위함이고 numbers의 원소는 0 이상 1,000 이하라서 3자리만 비교하면 된다.
     return str(int(''.join(numbers)))
 
 
