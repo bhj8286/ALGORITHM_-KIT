@@ -1,3 +1,12 @@
+# 참조 정답 코드
+def solution(numbers):
+    numbers = list(map(str, numbers))
+    numbers.sort(key=lambda x: x * 3, reverse=True)
+    return str(int(''.join(numbers)))
+
+
+
+
 # 틀릴 테스트케이스가 많다는 걸 알면서 했다
 def solution(arr):
     answer = ''
