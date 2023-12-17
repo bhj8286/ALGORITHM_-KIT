@@ -1,7 +1,7 @@
 from collections import Counter
 def solution(phone_book):
     answer = True
-    print(Counter(phone_book))
+    
             
     return answer
 
