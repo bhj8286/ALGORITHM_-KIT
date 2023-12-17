@@ -38,3 +38,5 @@ print(solution([["crow_mask", "face"], ["blue_sunglasses", "face"], ["smoky_make
 
 # (x+a)(x+b)(x+c) = x3 + (a+b+c)x2 + (ab+bc+ca)x + (abc)라는 식이 정립됩니다. 보이시죠? 총 조합의 개수가 계수에 다 포함되어있음
 # 그 후 맨 앞 x3 의 계수는 정답에 포함되지 않으므로 마지막에 1을 빼준다.
+
+# 근데 이것도 왜 hash문제인지?

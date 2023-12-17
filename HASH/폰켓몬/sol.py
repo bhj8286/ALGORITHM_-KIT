@@ -12,4 +12,4 @@ print(solution([3,1,2,3]))
 print(solution([3,3,3,2,2,4]))
 print(solution([3,3,3,2,2,2]))
 
-# 근데 이게 왜 hash문제임?
+# 근데 이게 왜 hash문제인지?
