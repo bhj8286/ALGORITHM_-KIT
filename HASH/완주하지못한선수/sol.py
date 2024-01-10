@@ -36,6 +36,7 @@ print(solution(["mislav", "stanko", "mislav", "ana"], ["stanko", "ana", "mislav"
 
 
 # 다른 사람 풀이
+
 import collections
 
 def solution(participant, completion):
