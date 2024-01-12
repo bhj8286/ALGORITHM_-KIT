@@ -38,7 +38,7 @@ def solution(phone_book):
                 break
     return answer
 
-# 해시 정석 풀이
+# 해시를 사용한 풀이: 근데 잘 모르겠음..
 def solution(phone_book): 
 
     # 1.Hash map생성
