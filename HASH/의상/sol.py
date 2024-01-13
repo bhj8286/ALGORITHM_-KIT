@@ -26,7 +26,8 @@ def solution(clothes):
     item = []
     for i in clothes:
         item.append(i[1])
-    my_dict = dict(collections.Counter(item))
+    my_dict = dict(collections.Counter(item)) ## dict를 안씌우면 Counter{key:value}형태로 나와서 dict를 씌워줘야함
+    print(my_dict)
     for value in my_dict.values():
         answer *= (value+1)
     answer = answer -1
