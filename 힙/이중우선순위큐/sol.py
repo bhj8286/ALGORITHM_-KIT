@@ -10,7 +10,7 @@ def solution(operations):
             heapq.heappop(my)
         elif i == "D 1" and len(my)!=0:
             my.pop(-1)
-    my.sort()  ## my를 정렬해주었다. 근데 힙큐형태는 정렬이 되어나온다했는데 필요한건가? 이 부분을 안넣으면 TC 6번이 통과가 안됨. 
+    my.sort()  ## my를 정렬해주었다. 근데 heappush를 사용하면 힙큐형태는 정렬이 되어나온다했는데 왜 필요한건가? 이 부분을 안넣으면 TC 6번이 통과가 안됨. 
     if len(my) != 0:
         answer.append(my[-1])
         answer.append(my[0])
