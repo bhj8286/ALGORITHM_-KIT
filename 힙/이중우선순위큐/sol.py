@@ -5,7 +5,7 @@ def solution(operations):
     heapq.heapify(my)
     for i in operations:
         if i[0] == 'I':
-            heapq.heappush(my, int(i.split()[1]))
+            heapq.heappush(my, int(i.split()[1])) # I가 나온 경우 뒤의 숫자만 리스트에 넣기위해 띄어쓰기 기준으로 split후 리스트에 삽입
         elif i == "D -1" and len(my)!=0:
             heapq.heappop(my)
         elif i == "D 1" and len(my)!=0:
