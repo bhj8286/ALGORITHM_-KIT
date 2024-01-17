@@ -21,3 +21,6 @@ def solution(operations):
 
 print(solution(["I 16", "I -5643", "D -1", "D 1", "D 1", "I 123", "D -1"]))
 print(solution(["I -45", "I 653", "D 1", "I -642", "I 45", "I 97", "D 1", "D -1", "I 333"]))
+
+# sort부분: remove()나 pop(-1)을 한 경우 힙 구조가 깨진다함. 그래서 for문이 끝나고 sort를 시켜줘야하는 것같다. 
+# 근데 그러면 elif i == "D 1" and len(my)!=0: my.pop(-1) 이 부분도 안돼야 하는거 아닌가?...
