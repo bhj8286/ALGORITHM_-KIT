@@ -1,13 +1,59 @@
 import heapq
 def solution(jobs):
     answer = 0
+    hap = 0
+    jongryo_list = []
+    flipped_list = []
+    heapq.heapify(flipped_list)
     for i in jobs:
-        pass
+        i = i[::-1] # 작업시간 적은 순서대로 꺼내기위해 리스트를 [[3, 0], [9, 1], [6, 2]]로 바꾸어줌
+        heapq.heappush(flipped_list,i)
+    while len(flipped_list) != 0:
+        a= heapq.heappop(flipped_list)
+        hap += a[0]
+        jongryo = hap - a[1]
+        jongryo_list.append(jongryo)
+    answer = sum(jongryo_list)/len(jobs)
     return answer
 
 print(solution([[0, 3], [1, 9], [2, 6]]))
+print(solution([[0, 5], [1, 2], [5, 5]]))
+
+import heapq
+def solution(jobs):
+    answer = 0
+    hap = 0
+    j = len(jobs)
+    jongryo_list = []
+    zero_jobs = []
+    not_zero_jobs = []
+    flipped_list = []
+    for i in jobs:
+        if i[0] == 0:
+            zero_jobs.append(i)
+        else:
+            not_zero_jobs.append(i)
+    print(zero_jobs)
+    print(not_zero_jobs)
+    heapq.heapify(zero_jobs)
+    heapq.heapify(not_zero_jobs)
+    heapq.heapify(flipped_list)
+    while len(zero_jobs) != 0:
+        a= heapq.heappop(zero_jobs)
+        hap += a[1]
+        jongryo = hap - a[0]
+        jongryo_list.append(jongryo)
+    for i in not_zero_jobs:
+        i = i[::-1] # 작업시간 적은 순서대로 꺼내기위해 리스트를 [[3, 0], [9, 1], [6, 2]]로 바꾸어줌
+        heapq.heappush(flipped_list,i)
+    while len(flipped_list) != 0:
+        a= heapq.heappop(flipped_list)
+        hap += a[1]
+        jongryo = hap - a[0]
+        jongryo_list.append(jongryo)
+    answer = sum(jongryo_list)/j
+    return answer
+print(solution([[0, 3], [1, 9], [2, 6]]))
+print(solution([[0, 5], [1, 2], [5, 5]]))
 
 
-# heapq 모듈은 일반적으로 리스트의 각 요소를 튜플로 처리하고, 튜플의 첫 번째 요소를 기준으로 최소 힙(min heap)을 구성합니다. 튜플의 첫 번째 요소가 동일한 경우에는 다음 요소로 비교합니다.
-
-# 예를 들어, 주어진 이중 리스트 [[0, 3], [1, 9], [2, 6]]에서 [0, 3]의 경우 튜플로 변환하면 (0, 3)이 되고, [1, 9]은 (1, 9), [2, 6]은 (2, 6)이 됩니다. 이 튜플들을 기준으로 최소 힙이 구성됩니다. 즉, 튜플의 첫 번째 요소를 비교하여 최소값이 루트에 위치하게 됩니다.
