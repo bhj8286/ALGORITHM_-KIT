@@ -13,8 +13,6 @@ def solution(genres, plays):
 
     max_key = max(hap, key=lambda k: hap[k])
 
-    
-    
     return answer
 
 print(solution(["classic", "pop", "classic", "classic", "pop"], [500, 600, 150, 800, 2500]))
