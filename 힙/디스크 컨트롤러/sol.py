@@ -48,12 +48,16 @@ def solution(jobs):
         heapq.heappush(flipped_list,i)
     while len(flipped_list) != 0:
         a= heapq.heappop(flipped_list)
-        hap += a[1]
-        jongryo = hap - a[0]
+        hap += a[0]
+        jongryo = hap - a[1]
+        if jongryo < 0:
+            jongryo = 0
+            jongryo_list.append(0)
         jongryo_list.append(jongryo)
     answer = sum(jongryo_list)/j
     return answer
 print(solution([[0, 3], [1, 9], [2, 6]]))
 print(solution([[0, 5], [1, 2], [5, 5]]))
+print(solution([[0, 10], [4, 10], [5, 11], [15, 2]]))
 
 
