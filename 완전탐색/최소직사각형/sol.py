@@ -1,5 +1,10 @@
 def solution(sizes):
     answer = 0
+    re_sizes = []
+    for i in sizes:
+        i.sort
+        re_sizes.append(i)
+    print(re_sizes)
     return answer
 
 print(solution([[60, 50], [30, 70], [60, 30], [80, 40]]))
