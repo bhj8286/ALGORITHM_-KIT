@@ -17,5 +17,10 @@ print(solution([[10, 7], [12, 3], [8, 15], [14, 7], [5, 15]]))
 print(solution([[14, 4], [19, 6], [6, 16], [18, 7], [7, 11]]))
 
 # 다른 사람 풀이: 오...
+# 1.
 def solution(sizes):
     return max(max(x) for x in sizes) * max(min(x) for x in sizes)
+
+# 2.
+solution = lambda sizes: max(sum(sizes, [])) * max(min(size) for size in sizes)
+
